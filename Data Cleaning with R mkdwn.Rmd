@@ -550,7 +550,26 @@ SCATTERPLOT
 
 plot(Time_s, Daily, xlab="Time spent on the site", ylab="Daily internet usage")
 ```
+### CLICKED ON ADS VISUALIZATIONS
 
+# Grouped Bar Plot
+```{r, echo=TRUE, eval=TRUE}
+counts = table(adverts$Male, adverts$Clicked.on.Ad)
+barplot(counts, main="number of Clicks on an Ad as per each sex, 0=Female, 1=male",
+xlab="Ad Clicks", col=c("green","red"),
+legend = rownames(counts), beside=TRUE)
+```
+There is an equal number of both male and female users who did not click on ads. 
+MOre females clicked on ads compared to men.
+
+# Grouped Bar Plot
+```{r, echo=TRUE, eval=TRUE}
+
+counts = table(adverts$Age, adverts$Clicked.on.Ad)
+barplot(counts, main="number of Clicks on an Ad as per Age",
+xlab="Ad Clicks", col=c("yellow","blue"),
+legend = rownames(counts), beside=TRUE)
+```
 
 ## MULTIVARIATE ANALYSIS
 > Getting the correlation matrix 
